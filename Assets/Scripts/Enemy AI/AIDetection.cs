@@ -7,6 +7,7 @@ public class AIDetection : MonoBehaviour
     public float beta = 45;
     public float range = 15;
     public GameObject player;
+    public Material enemyMaterial;
 
     // Start is called before the first frame update
     void Start()
@@ -47,10 +48,18 @@ public class AIDetection : MonoBehaviour
 
         Debug.Log(alpha);
         if (alpha > -beta && alpha < beta && p.magnitude < range)
+        {
             Debug.DrawLine(transform.position, player.transform.position, Color.red);
+            enemyMaterial.color = Color.blue;
+        }
+          
         else
+        {
             Debug.DrawLine(transform.position, player.transform.position, Color.green);
-
+            enemyMaterial.color = Color.red;
+        }
+            
+        
         // Vector3 q = transform.right;
         Vector3 q = Vector3.Cross(transform.forward, transform.up);
         Vector3 proj = Vector3.Dot(p, q) / q.sqrMagnitude * q;
