@@ -749,7 +749,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &963194227
 Camera:
   m_ObjectHideFlags: 0
@@ -903,6 +903,16 @@ MonoBehaviour:
       SourcePrefabToOverride: {fileID: 0}
       SourceHashToOverride: 0
       OverridingTargetPrefab: {fileID: 0}
+    - Override: 0
+      Prefab: {fileID: 7907552502076010893, guid: 649c2399973504341bde147be90d9830, type: 3}
+      SourcePrefabToOverride: {fileID: 0}
+      SourceHashToOverride: 0
+      OverridingTargetPrefab: {fileID: 0}
+    - Override: 0
+      Prefab: {fileID: 5412166918091747374, guid: 94d45dbb0c56c4448802e45d1ea921c7, type: 3}
+      SourcePrefabToOverride: {fileID: 0}
+      SourceHashToOverride: 0
+      OverridingTargetPrefab: {fileID: 0}
     TickRate: 30
     ClientConnectionBufferTimeout: 10
     ConnectionApproval: 0
@@ -930,8 +940,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96b7896996ffd9441aedcb683183d98f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1Prefab: {fileID: 4775925696712711626, guid: 1d3ea13a4948ab546b5b6af77932b181, type: 3}
-  player2Prefab: {fileID: 7999462358088749508, guid: 1cd88575bcb230c438218949e72b7410, type: 3}
+  player1Prefab: {fileID: 7907552502076010893, guid: 649c2399973504341bde147be90d9830, type: 3}
+  player2Prefab: {fileID: 5412166918091747374, guid: 94d45dbb0c56c4448802e45d1ea921c7, type: 3}
 --- !u!1 &1029865503
 GameObject:
   m_ObjectHideFlags: 0
