@@ -33,8 +33,8 @@ public class WordInput : MonoBehaviour
             {
                 if (value[i] != password[i]) // if an incorrect character is found:
                 {
-                    // TO DO: damage, sound
-                    Debug.Log("incorrect!");
+                    // TO DO: sound
+                    Level1GameManager.Instance.LoseHealth(10);
                     break; // stop checking
                 }
             }
@@ -43,7 +43,7 @@ public class WordInput : MonoBehaviour
             {
                 // TO DO: free player 2
                 gameObject.SetActive(false);
-                Debug.Log("you win!");
+                Level1GameManager.Instance.WinGame();
             }
         }
         lastValue = value;
