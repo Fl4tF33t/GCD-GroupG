@@ -5,7 +5,7 @@ using Unity.Netcode;
 
 public class Level1GameManager : NetworkBehaviour
 {
-    public int health;
+    public NetworkVariable<int> health = new(100); // shorthand for 'new NetworkVariable<int>(100)'
 
     // https://gamedevbeginner.com/singletons-in-unity-the-right-way/
     // public - globally accessible
@@ -28,12 +28,12 @@ public class Level1GameManager : NetworkBehaviour
 
     public int LoseHealth(int damage)
     {
-        health -= damage;
-        if (health <= 0)
+        health.Value = health.Value - damage;
+        if (health.Value <= 0)
         {
             LoseGame();
         }
-        return health;
+        return health.Value;
     }
 
     public void LoseGame()
