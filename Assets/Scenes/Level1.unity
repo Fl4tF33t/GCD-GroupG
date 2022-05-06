@@ -2957,7 +2957,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f8c837466c4acf45b0142b447c710bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health:
+    m_InternalValue: 100
 --- !u!4 &967850276
 Transform:
   m_ObjectHideFlags: 0
@@ -5254,7 +5255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a38e6749ea3e2264f88082ec06b61a79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: PASSWORD
+  answer: PASSWORD
 --- !u!1001 &1628815503
 PrefabInstance:
   m_ObjectHideFlags: 0
