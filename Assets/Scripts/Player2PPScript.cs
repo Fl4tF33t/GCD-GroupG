@@ -9,16 +9,16 @@ public class Player2PPScript : MonoBehaviour
 
     private void Start()
     {
-        Level1GameManager.Instance.health.OnValueChanged += OnValueChanged;
+        Level1GameManager.Instance.health.OnValueChanged += OnValueChangedPostProcess;
     }
 
-    void OnValueChanged(int previous, int current)
+    private void OnValueChangedPostProcess(int previous, int current)
     {
         HealthPPVol.weight = (float)(100 - current) / 100;
-        StartCoroutine("electrEffect");
+        StartCoroutine("ElectrEffect");
     }
 
-    private IEnumerator electrEffect()
+    private IEnumerator ElectrEffect()
     {
         ElectrPPVol.weight = 1f;
         yield return new WaitForSeconds(0.2f);
